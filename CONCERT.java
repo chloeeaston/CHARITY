@@ -89,7 +89,18 @@ public class CONCERT
     
     public void counttotal()
     {
-        // placeholder
+        // placeholder 
+        System.out.print("a report of total money raised for charity : "); 
+        // start the count 
+        float total = 0.0f; 
+        for (int i = 0; i < noOfCustomers; i++)
+        { total = total + customerList[i].total;
+        } 
+        System.out.print("\n total money raised for charity :"); 
+        
+        // if (TicketID = W or T' add 5 to total 
+        // if (TicketID = f add 10 to total
+        if ( TicketID = W/T + 5 to total) 
     }
 
     public void savefridaynightfile()

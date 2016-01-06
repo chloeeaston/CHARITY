@@ -5,6 +5,7 @@
         private char TicketID;
         private int NumOfTickets;
         private char method;
+        public float total;
         
     public CUSTOMER()
     {
