@@ -100,7 +100,7 @@ public class CONCERT
         
         // if (TicketID = W or T' add 5 to total 
         // if (TicketID = f add 10 to total
-        if ( TicketID = W/T + 5 to total) 
+        
     }
 
     public void savefridaynightfile()
