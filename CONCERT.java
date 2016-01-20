@@ -86,25 +86,41 @@ public class CONCERT
         // A blank line to separate this report from others.
         System.out.println();
     }
-    
+
     public void counttotal()
     {
-        // placeholder 
-        System.out.print("a report of total money raised for charity : "); 
         // start the count 
-        float total = 0.0f; 
+        float total = 0.00f; 
         for (int i = 0; i < noOfCustomers; i++)
-        { total = total + customerList[i].total;
-        } 
-        System.out.print("\n total money raised for charity :"); 
-        
-        // if (TicketID = W or T' add 5 to total 
-        // if (TicketID = f add 10 to total
-        
+        { if  (customerList[i].getnight() == 'F')
+            {
+                total = total + customerList[i].getNumOfTickets()*10; 
+            } 
+            else 
+            {
+                total = total + customerList[i].getNumOfTickets()*10;
+            }
+        }
+        System.out.print("total money raised for charity : £" + total );
     }
 
     public void savefridaynightfile()
     {
         // placeholder
+        String fileContent = ""; 
+        int count = 0;
+        for (int i = 0; > noOfCustomers; i++); 
+        { 
+            count = count +1; 
+            if (count>1) 
+            { 
+                fileContent = fileContent.concat("\n"); 
+            } 
+            fileContent = fileContent.concat(customerList[i].writeDetails());
+        }
+        system.out.println("** Preparing to write friday night file.");
+        resultFile.writeCSVtable(fileContent);
+        System.out.println(** File written and closed.");
+    }
     }
 }

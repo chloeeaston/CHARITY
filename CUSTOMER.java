@@ -1,21 +1,22 @@
-      public class CUSTOMER
-    {
-        // lsit of properties
-        private String CustomerID;
-        private char TicketID;
-        private int NumOfTickets;
-        private char method;
-        public float total;
-        
+public class CUSTOMER
+{
+    // lsit of properties
+    private String CustomerID;
+    private char TicketID;
+    private int NumOfTickets;
+    private char method;
+    public float total;
+    public char getnight; 
+
     public CUSTOMER()
     {
         CustomerID = "";
         TicketID = 0;
         NumOfTickets = 0;
         method = 0;
-        
+
     }
-    
+
     public void readCustomerDetails (String dataItems)
     {
         String [] rowItems = dataItems.split(",");
@@ -24,8 +25,8 @@
         NumOfTickets = Integer.parseInt(rowItems[2]);
         method = (rowItems[3]).charAt(0);
     }
-    
-    public String writeDeails()
+
+    public String writeDetails()
     {
         String customerData = "";
         customerData = customerData.concat(CustomerID);
@@ -37,9 +38,17 @@
         customerData = customerData.concat(Character.toString(method));
         return customerData;
     }
-    
+
     public char getmethod() 
     {
         return method;
     }
-}
+
+    public char getnight() 
+    {
+        return TicketID;
+    }
+    public int getNumOfTickets() 
+    { return NumOfTickets; 
+    }
+    }
