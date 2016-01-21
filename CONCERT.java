@@ -104,23 +104,28 @@ public class CONCERT
         System.out.print("total money raised for charity : £" + total );
     }
 
-    public void savefridaynightfile()
+    public void savefridaynightfile() throws IOException
     {
         // placeholder
         String fileContent = ""; 
         int count = 0;
-        for (int i = 0; > noOfCustomers; i++); 
+        for (int i = 0; i < noOfCustomers; i ++) 
+
         { 
-            count = count +1; 
+
+            if (customerList[i].getnight() == 'F' )
+                count = count +1; 
             if (count>1) 
             { 
                 fileContent = fileContent.concat("\n"); 
             } 
-            fileContent = fileContent.concat(customerList[i].writeDetails());
+            
         }
-        system.out.println("** Preparing to write friday night file.");
+    } 
+    fileContent = fileContent.concat(customerList[i].writeDetails()); 
+    
+        System.out.println("** Preparing to write friday night file.");
         resultFile.writeCSVtable(fileContent);
-        System.out.println(** File written and closed.");
-    }
+        System.out.println(" ** File written and closed.**");
     }
 }

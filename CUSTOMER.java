@@ -6,7 +6,8 @@ public class CUSTOMER
     private int NumOfTickets;
     private char method;
     public float total;
-    public char getnight; 
+    public char getnight;
+    public String SeatSection;
 
     public CUSTOMER()
     {
@@ -22,6 +23,7 @@ public class CUSTOMER
         String [] rowItems = dataItems.split(",");
         CustomerID = rowItems [0];
         TicketID = (rowItems[1]).charAt(0);
+        SeatSection = (rowItems[1]);
         NumOfTickets = Integer.parseInt(rowItems[2]);
         method = (rowItems[3]).charAt(0);
     }
@@ -31,7 +33,7 @@ public class CUSTOMER
         String customerData = "";
         customerData = customerData.concat(CustomerID);
         customerData = customerData.concat(",");
-        customerData = customerData.concat(Character.toString(TicketID));
+        customerData = customerData.concat(SeatSection);
         customerData = customerData.concat(",");
         customerData = customerData.concat(Integer.toString(NumOfTickets));
         customerData =customerData.concat(",");
@@ -48,6 +50,7 @@ public class CUSTOMER
     {
         return TicketID;
     }
+    
     public int getNumOfTickets() 
     { return NumOfTickets; 
     }
