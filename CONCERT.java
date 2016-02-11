@@ -114,18 +114,20 @@ public class CONCERT
         { 
 
             if (customerList[i].getnight() == 'F' )
-                count = count +1; 
-            if (count>1) 
             { 
-                fileContent = fileContent.concat("\n"); 
-            } 
-            
-        }
-    } 
-    fileContent = fileContent.concat(customerList[i].writeDetails()); 
-    
-        System.out.println("** Preparing to write friday night file.");
-        resultFile.writeCSVtable(fileContent);
-        System.out.println(" ** File written and closed.**");
+                count = count + 1; 
+
+                if (count>1) 
+                { 
+                    fileContent = fileContent.concat("\n"); 
+                } 
+
+            }
+            fileContent = fileContent.concat(customerList[i].writeDetails());
+            System.out.println("** Preparing to write friday night file.");
+            resultFile.writeCSVtable(fileContent);
+            System.out.println(" ** File written and closed.**");
+        } 
+
     }
 }
